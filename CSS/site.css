@@ -1,0 +1,27 @@
+﻿body {
+    text-align:center;
+}
+
+header, footer {
+    margin:50px 0px;
+}
+
+.authors {
+    position:fixed;
+    right:50px;
+    bottom:10px;
+}
+
+.dropzone {
+    border:2px dashed green;
+    min-height:200px;
+}
+
+
+/* 
+div {
+    border:2px solid red;
+}
+*/
+
+

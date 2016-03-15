@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="C:\Users\jillian\Documents\Visual Studio 2015\WebSites\WebSite1\CSS\normalize.css">
+    <link rel="stylesheet" type="text/css" href="C:\Users\jillian\Documents\Visual Studio 2015\WebSites\WebSite1\CSS\skeleton.css">
+    <link rel="stylesheet" type="text/css" href="C:\Users\jillian\Documents\Visual Studio 2015\WebSites\WebSite1\CSS\site.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Hashtag Generator">
+    <meta name="keywords" content="instagram,image,photo,hashtag,generator">
+    <meta name="author" content="Jack Still & Jillian Kong">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hashtag Generator</h1>
+            <h3>Drag and drop or import an image here to start</h3>
+        </div>
+    </header>
+
+    <div class="container" id="target"></div>
+    
+    <div class="container" id="submit" style="display:none">
+        <div class="offset-by-three six columns">
+            <div id="import">
+                <form action="/file-upload"
+                      class="dropzone"
+                      id="dropzone">
+                </form>
+                <form action="submit.php" method="post">
+                    <input type="file" name="file"></br>
+                    <input type="button" onclick="submitjs()" value="Submit File">
+                    <input type="button" onclick="remove()" value="Remove File">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- after import, fade to  -->
+    <!-- image -->
+    <div class="container" id="generated" style="display:none;">
+        <div class="row">
+            <div class="seven columns">
+                <img src="http://www.freetoursbyfoot.com/wp-content/uploads/2014/08/New-York-Top-of-the-rock-black-white.jpg"
+                     alt="new-york"
+                     style="width:400px;height:400px;">
+            </div>
+            <div class="two columns">
+                <ul>
+                    <li>Tag 1</li>
+                    <li>Tag 2</li>
+                    <li>Tag 3</li>
+                    <li>Tag 4</li>
+                    <li>Tag 5</li>
+                </ul>
+            </div>
+        </div>
+        </br>
+        <form action="submit.php" method="post">
+            <input type="button" onclick="resetjs()" value="Go again?">
+        </form>
+    </div>
+    
+    <div class="authors">
+       <footer>by Jack Still and Jillian Kong</footer>
+   </div> 
+   <script src="C:\Users\jillian\Documents\Visual Studio 2015\WebSites\WebSite1\JavaScript\JavaScript.js"></script>
+   <script src="C:\Users\jillian\Documents\Visual Studio 2015\WebSites\WebSite1\JavaScript\dropzone.js"></script>
+</body>
+</html>
